@@ -1,0 +1,71 @@
+<div id="contact" class="container mt-5 mb-5">
+  
+   <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">📩 Contactez-nous</h2>
+          
+  <div class="row justify-content-center">
+      <!-- Coordonnées -->
+      <div class="col-md-5">
+          <div class="card shadow-lg border-0 rounded-4 p-4">
+              <h4 class="text-primary"><i class="bi bi-geo-alt-fill"></i> Nos Coordonnées</h4>
+              <p>
+                  <i class="bi bi-geo-alt"></i> <strong>Adresse :</strong> 16-14 Mouhamed Badra Mont plaisir<br>
+                  <i class="bi bi-telephone-fill"></i> <strong>Téléphone :</strong> +216 58 282 034 / +216 52 357 277<br>
+                  <i class="bi bi-envelope-fill"></i> <strong>Email :</strong> tunis.unesst&#64;gmail.com
+              </p>
+
+              <h4 class="text-primary"><i class="bi bi-share-fill"></i> Suivez-nous</h4>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/share/1C1usHJWwT/?mibextid=wwXIfr" class="btn btn-outline-primary"><i class="bi bi-facebook"></i> Facebook</a>
+                  <a href="https://www.linkedin.com/in/unesst-tunis-801860278/" class="btn btn-outline-info"><i class="bi bi-linkedin"></i> Linkedin</a>
+                  <a href="https://www.instagram.com/unesst_sn?igsh=MXJ0ZTQ5a2I0d2hoeA==" class="btn btn-outline-danger"><i class="bi bi-instagram"></i> Instagram</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <div class="col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 p-4">
+              <h4 class="text-primary"><i class="bi bi-chat-left-dots-fill"></i> Formulaire de contact</h4>
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="contactName" class="form-label">Nom</label>
+                    <input formControlName="name" type="text" class="form-control" id="contactName" placeholder="Votre nom">
+                </div>
+                <div class="mb-3">
+                    <label for="contactEmail" class="form-label">Email</label>
+                    <input formControlName="email" type="email" class="form-control" id="contactEmail" placeholder="Votre email">
+                </div>
+                <div class="mb-3">
+                    <label for="contactMessage" class="form-label">Message</label>
+                    <textarea formControlName="message" class="form-control" id="contactMessage" rows="4" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" [disabled]="contactForm.invalid">
+                    <i class="bi bi-send-fill"></i> Envoyer
+                </button>
+                </form>
+
+          </div>
+      </div>
+  </div>
+</div> 
+
+
+<!-- Modal -->
+<div class="modal fade show d-block" tabindex="-1" *ngIf="showModal" style="background: rgba(0,0,0,0.4);">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="{ 'bg-success': successMessage, 'bg-danger': errorMessage }">
+        <h5 class="modal-title text-white">Notification</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeModal()">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+

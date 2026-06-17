@@ -1,0 +1,21 @@
+footer a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Animation fluide */
+    padding: 5px 8px; /* Ajout de padding pour rendre l'effet hover plus visible */
+    border-radius: 4px; /* Légèrement arrondi */
+}
+
+footer a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fond légèrement blanc au survol */
+    color: #ffd700 !important; /* Changement de couleur du texte */
+}
+
+/* Différenciation des couleurs des titres et des informations */
+footer h5 {
+    color: #ffcc00; /* Couleur dorée pour les titres */
+    font-weight: bold;
+}
+
+footer p, footer li {
+    color: #f8f9fa; /* Texte légèrement plus clair */
+}

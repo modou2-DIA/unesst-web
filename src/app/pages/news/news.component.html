@@ -1,0 +1,26 @@
+
+    <!-- Documents Section -->
+    <section id="documents" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Documents Officiels de l'UNESST</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                   <div *ngFor="let doc of documents" class="bg-blue-50 rounded-lg p-8">
+                        <h3 class="text-xl font-semibold mb-4">{{ doc.titre }}</h3>
+                        <p class="text-gray-600 mb-6">{{ doc.description }}</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a [href]="doc.file" target="_blank" class="flex items-center bg-white px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-100">
+                            <i class="fas fa-eye mr-2"></i> Consulter
+                            </a>
+                            <a [href]="doc.file" download class="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-download mr-2"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </section>

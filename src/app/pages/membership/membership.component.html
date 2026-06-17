@@ -1,0 +1,51 @@
+
+<div class="container mt-5 mb-5">
+     <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Adhésion à l'UNESST</h2>
+          
+
+  <p class="text-center text-muted">
+      Rejoignez une communauté dynamique et bénéficiez d’un réseau de soutien, d'événements exclusifs et d'opportunités académiques.
+  </p>
+
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 p-4">
+              <h4 class="text-center mb-3 text-primary">Formulaire d'adhésion</h4>
+              <form [formGroup]="adhesionForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Nom complet</label>
+                    <input type="text" formControlName="fullName" class="form-control" id="fullName" placeholder="Votre nom complet">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="Votre adresse e-mail">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Téléphone</label>
+                    <input type="tel" formControlName="phone" class="form-control" id="phone" placeholder="Votre numéro de téléphone">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message (optionnel)</label>
+                    <textarea formControlName="message" class="form-control" id="message" rows="3" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 btn-lg">S'inscrire</button>
+                </form>
+
+                <!-- Modal -->
+                <div *ngIf="showModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
+                    <h4 class="text-xl font-bold mb-4" [ngClass]="modalSuccess ? 'text-green-600' : 'text-red-600'">
+                    {{ modalSuccess ? 'Succès' : 'Erreur' }}
+                    </h4>
+                    <p class="text-gray-700 mb-4">{{ modalMessage }}</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded" (click)="closeModal()">Fermer</button>
+                </div>
+                </div>
+
+
+        
+          </div>
+      </div>
+  </div>
+</div>
+ 

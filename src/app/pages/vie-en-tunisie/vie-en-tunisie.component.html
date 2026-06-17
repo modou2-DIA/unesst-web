@@ -1,0 +1,93 @@
+ <section id="vie-tunisie" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Informations sur la vie en Tunisie</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-blue-600 p-8 text-white">
+                            <h3 class="text-xl font-bold mb-4">Ambassade du Sénégal en Tunisie</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium">Adresse :</p>
+                                        <p>Immeuble Hermes, Rue du Lac Hurron, 4ème étage, Les Berges du Lac 1 1053 Tunis, Tunisia</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium">Téléphone :</p>
+                                        <p>+216 71 860 387</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium">Email :</p>
+                                        <p>ambassade.senegal&#64;tunet.tn</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium">Horaires :</p>
+                                        <p>Lundi-Vendredi : 8h30-16h30</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-0">
+                            <div class="h-full w-full bg-gray-200" id="map" style="height: 100%; min-height: 300px;">
+                                <!-- Map will be inserted here by JavaScript -->
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="max-w-4xl mx-auto">
+                <div class="relative">
+      <!-- Bouton gauche -->
+      <button (click)="scrollLeftInfos()" class="flex absolute absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 text-white p-2 rounded-full shadow hover:bg-blue-700">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Carrousel horizontal -->
+      <div #carouselInfos class="flex overflow-x-auto space-x-4 sm:space-x-6 scroll-smooth pb-4 px-2 sm:px-8">
+        <div *ngFor="let info of infos" class="min-w-[280px] sm:min-w-[320px] flex-shrink-0 bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 p-3 rounded-full mr-4 text-lg">
+              <i [class]="info.icon + ' text-blue-600'"></i>
+            </div>
+            <h4 class="font-semibold text-base sm:text-lg">{{ info.titre }}</h4>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li *ngFor="let ligne of info.details" class="flex items-start">
+              <i class="fas fa-check text-blue-500 mt-1 mr-2 text-xs"></i>
+              {{ ligne }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bouton droit -->
+      <button (click)="scrollRightInfos()" class="flex absolute  absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 text-white p-2 rounded-full shadow hover:bg-blue-700">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+</div>
+
+
+
+
+                <div class="mt-8 text-center">
+                    <a href="assets/docs/Guide_Vie_Complete_Tunisie_UNESST_Detaille.pdf" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                        Télécharger le guide complet de la vie en Tunisie
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> 

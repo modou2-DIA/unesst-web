@@ -1,0 +1,107 @@
+/* Styles pour le carrousel */
+.carousel-container {
+    position: relative;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Largeur maximale du texte */
+    max-width: 800px; /* Largeur maximale pour les grands écrans */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Ajustements pour les petits écrans */
+  @media (max-width: 768px) {
+    .carousel-caption h1 {
+      font-size: 1.5rem; /* Taille du texte réduite pour les petits écrans */
+    }
+  
+    .carousel-caption p {
+      font-size: 1rem; /* Taille du texte réduite pour les petits écrans */
+    }
+  
+    .carousel-caption .btn {
+      font-size: 0.9rem; /* Taille du bouton réduite pour les petits écrans */
+      padding: 8px 16px; /* Ajustement du padding */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-caption h1 {
+      font-size: 1.2rem; /* Taille du texte encore plus réduite pour les très petits écrans */
+    }
+  
+    .carousel-caption p {
+      font-size: 0.9rem; /* Taille du texte encore plus réduite pour les très petits écrans */
+    }
+  
+    .carousel-caption .btn {
+      font-size: 0.8rem; /* Taille du bouton encore plus réduite pour les très petits écrans */
+      padding: 6px 12px; /* Ajustement du padding */
+    }
+  }
+
+.container mt-5{
+    margin-top: 100px;
+}
+
+.contact-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+
+/* Styles pour que le carrousel occupe tout l'écran */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#welcomeCarousel .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+}
+
+
+.contact-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Ajout d'un espace pour scroller après le carrousel .mt-5 {
+    padding: 50px 15px;
+} */
+
+.content {
+    padding: 50px 15px;
+
+}

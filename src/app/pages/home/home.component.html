@@ -1,0 +1,70 @@
+<!-- Carrousel en plein écran avec message de bienvenue -->
+<section class="carousel-container">
+  <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/images/IMG_9911.jpeg" class="d-block w-100" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/awards.JPG" class="d-block w-100" alt="Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/initiative.JPG" class="d-block w-100" alt="Image 2">
+      </div>
+      
+      <div class="carousel-item">
+        <img src="./assets/images/IMG_9913.jpeg" class="d-block w-100" alt="Image 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+    <!-- Texte et bouton du carrousel -->
+    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+      <h1 class="text-white display-4 text-center">Bienvenue à l'UNESST</h1>
+      <p class="lead text-center d-none d-md-block">L'Union des Étudiants et Stagiaires Sénégalais en Tunisie</p>
+      <a href="#contact" class="btn btn-warning contact-btn mt-3">Nous Contacter</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section À Propos -->
+<app-about></app-about>
+
+ <!-- Documents Section -->
+  <app-news></app-news>
+
+        <!-- Vie en Tunisie Section -->
+   <app-vie-en-tunisie></app-vie-en-tunisie>
+
+<!-- Section Événements --> 
+
+<app-events></app-events>
+
+
+<!-- Bureau Section --> 
+  <app-bureau></app-bureau>
+  
+<!-- contact Section --> 
+  <app-contact></app-contact>
+
+
+
+<!-- Section Adhésion -->
+<section id="adhesion" class="mt-5 mb-5">
+  <h2 class="fw-bold text-primary text-center">Adhérez à l’UNESST</h2>
+  <p class="text-center">Rejoignez notre communauté et bénéficiez de notre soutien.</p>
+  <div class="text-center">
+    <a href="/unesst-web/membership" class="btn btn-primary btn-lg">Rejoignez-nous</a>
+  </div>
+</section>
+
+<!-- Bouton Retour en haut -->
+<button id="backToTop" class="fixed bottom-5 right-5 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hidden">
+  ↑ 
+</button>
+

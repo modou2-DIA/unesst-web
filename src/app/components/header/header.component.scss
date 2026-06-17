@@ -1,0 +1,68 @@
+header {
+    nav.navbar {
+      position: fixed;        // Le menu est fixe en haut
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      width: 100%;
+      padding: 1rem 2rem;    // Ajustez le padding pour un menu plus large
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optionnel : ombre portée
+  
+      .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      // Le logo à gauche
+      .navbar-brand {
+        font-size: 1.5rem;
+        margin-right: auto;
+      }
+  
+      // Les liens de navigation à droite
+      .navbar-nav {
+        display: flex;
+        margin-left: auto;
+        gap: 1.5rem;
+  
+        li.nav-item {
+          margin-left: 1rem;   // Espacement entre les liens
+  
+          a.nav-link {
+            padding: 0.5rem 1rem; // Ajuste le padding des liens
+            transition: background-color 0.3s ease;
+            
+            &:hover,
+            &:focus {
+              background-color: rgba(255, 255, 255, 0.1);
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Optionnel : ajouter un padding-top au contenu principal pour éviter le chevauchement avec la navbar fixe */
+  body {
+    padding-top: 70px; /* Ajustez selon la hauteur de votre navbar */
+  }
+  
+  .navbar-nav .nav-link.active-link {
+    background-color: #ffcc00; /* Changer la couleur de fond */
+    color: #000 !important; /* Changer la couleur du texte */
+    border-radius: 5px;
+    font-weight: bold;
+     
+  } 
+
+  .active-nav {
+  color: #1e3a8a; /* text-blue-800 */
+  font-weight: bold;
+  border-bottom: 2px solid #1e3a8a;
+}
+
+  
+ 
